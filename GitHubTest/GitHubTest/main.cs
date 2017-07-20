@@ -16,5 +16,10 @@ namespace GitHubTest
         {
             InitializeComponent();
         }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is a Test program!!!");
+        }
     }
 }
