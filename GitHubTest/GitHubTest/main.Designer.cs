@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnTest = new System.Windows.Forms.Button();
+            this.tBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnTest
@@ -41,21 +42,33 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
+            // tBox
+            // 
+            this.tBox.Location = new System.Drawing.Point(0, 0);
+            this.tBox.Multiline = true;
+            this.tBox.Name = "tBox";
+            this.tBox.Size = new System.Drawing.Size(583, 510);
+            this.tBox.TabIndex = 1;
+            this.tBox.Text = "Hello everyone!!!";
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 511);
+            this.Controls.Add(this.tBox);
             this.Controls.Add(this.btnTest);
             this.Name = "main";
             this.Text = "GitHubTest";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.TextBox tBox;
     }
 }
 

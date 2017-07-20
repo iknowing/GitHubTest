@@ -20,6 +20,7 @@ namespace GitHubTest
         private void btnTest_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is a Test program!!!");
+            this.tBox.Text += "\r\nWelcome to China!!!\r\n";
         }
     }
 }
