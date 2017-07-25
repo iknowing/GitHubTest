@@ -22,5 +22,10 @@ namespace GitHubTest
             MessageBox.Show("This is a Test program!!!");
             this.tBox.Text += "\r\nWelcome to China!!!\r\n";
         }
+
+        private void timerLocalTime_Tick(object sender, EventArgs e)
+        {
+            this.tsslLocalTime.Text = DateTime.Now.ToString();
+        }
     }
 }

@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnTest = new System.Windows.Forms.Button();
             this.tBox = new System.Windows.Forms.TextBox();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.tsslMessage = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslLogo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timerLocalTime = new System.Windows.Forms.Timer(this.components);
+            this.tsslLocalTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTest
@@ -47,19 +54,61 @@
             this.tBox.Location = new System.Drawing.Point(0, 0);
             this.tBox.Multiline = true;
             this.tBox.Name = "tBox";
-            this.tBox.Size = new System.Drawing.Size(583, 510);
+            this.tBox.Size = new System.Drawing.Size(583, 479);
             this.tBox.TabIndex = 1;
             this.tBox.Text = "Hello everyone!!!";
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslMessage,
+            this.tsslLogo,
+            this.tsslLocalTime});
+            this.statusStrip.Location = new System.Drawing.Point(0, 482);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(777, 29);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "statusStrip1";
+            // 
+            // tsslMessage
+            // 
+            this.tsslMessage.Name = "tsslMessage";
+            this.tsslMessage.Size = new System.Drawing.Size(104, 24);
+            this.tsslMessage.Text = "Hello GitHub";
+            // 
+            // tsslLogo
+            // 
+            this.tsslLogo.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
+            this.tsslLogo.Name = "tsslLogo";
+            this.tsslLogo.Size = new System.Drawing.Size(499, 24);
+            this.tsslLogo.Spring = true;
+            this.tsslLogo.Text = "HANGZHOU ONTIME I.T. CO.,LTD";
+            // 
+            // timerLocalTime
+            // 
+            this.timerLocalTime.Enabled = true;
+            this.timerLocalTime.Interval = 1000;
+            this.timerLocalTime.Tick += new System.EventHandler(this.timerLocalTime_Tick);
+            // 
+            // tsslLocalTime
+            // 
+            this.tsslLocalTime.Name = "tsslLocalTime";
+            this.tsslLocalTime.Size = new System.Drawing.Size(159, 24);
+            this.tsslLocalTime.Text = "2017-07-25 13:45:41";
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 511);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.tBox);
             this.Controls.Add(this.btnTest);
             this.Name = "main";
             this.Text = "GitHubTest";
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,6 +118,11 @@
 
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.TextBox tBox;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel tsslMessage;
+        private System.Windows.Forms.ToolStripStatusLabel tsslLogo;
+        private System.Windows.Forms.Timer timerLocalTime;
+        private System.Windows.Forms.ToolStripStatusLabel tsslLocalTime;
     }
 }
 
